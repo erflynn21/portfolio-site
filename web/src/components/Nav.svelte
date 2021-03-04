@@ -1,60 +1,43 @@
 <script>
-	export let segment;
+    export let segment;
 </script>
 
-<style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	.selected {
-		position: relative;
-		display: inline-block;
-	}
-
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
-</style>
-
-<nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
-	</ul>
+<nav class="py-4 bg-theme-gray relative">
+    <div class="absolute top-4 left-6 md:left-8 lg:left-16">
+        <img src="favicon.png" alt="evan flynn logo" class="h-10" />
+    </div>
+    <ul class="flex items-center justify-end mt-4">
+        <li>
+            <a
+                class="{segment === 'home'
+                    ? 'selected'
+                    : ''} mx-4 font-light text-base"
+                href="home">home</a
+            >
+        </li>
+        <li>
+            <a
+                class="{segment === 'work'
+                    ? 'selected'
+                    : ''} mx-4 font-light text-base"
+                href="work">work</a
+            >
+        </li>
+        <!-- <li>
+            <a
+                class="{segment === 'blog'
+                    ? 'selected'
+                    : ''} mx-6 font-light text-lg"
+                href="blog">blog</a
+            >
+        </li> -->
+        <li>
+            <a
+                class="{segment === 'contact'
+                    ? 'selected'
+                    : ''} mx-4 mr-6 font-light text-base"
+                href="contact">contact</a
+            >
+        </li>
+    </ul>
 </nav>

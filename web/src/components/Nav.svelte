@@ -9,8 +9,8 @@
     <ul class="flex items-center justify-end mt-2">
         <li>
             <a
-                class="{segment === 'home'
-                    ? 'selected'
+                class="{segment === undefined
+                    ? 'border-b border-theme-blue'
                     : ''} mx-4 font-light text-base"
                 href=".">home</a
             >
@@ -18,7 +18,7 @@
         <li>
             <a
                 class="{segment === 'work'
-                    ? 'selected'
+                    ? 'border-b border-theme-blue'
                     : ''} mx-4 font-light text-base"
                 href="work">work</a
             >
@@ -26,7 +26,7 @@
         <!-- <li>
             <a
                 class="{segment === 'blog'
-                    ? 'selected'
+                    ? 'border-b border-theme-blue'
                     : ''} mx-6 font-light text-lg"
                 href="blog">blog</a
             >
@@ -34,7 +34,7 @@
         <li>
             <a
                 class="{segment === 'contact'
-                    ? 'selected'
+                    ? 'border-b border-theme-blue'
                     : ''} mx-4 mr-6 font-light text-base"
                 href="contact">contact</a
             >

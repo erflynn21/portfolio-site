@@ -1,5 +1,5 @@
 <script>
-    import { fade, slide, fly } from 'svelte/transition';
+    import { fade, fly } from 'svelte/transition';
 
     let formData = {
         name: '',

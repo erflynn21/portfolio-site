@@ -1,8 +1,12 @@
 <script>
     export let project;
+    import { slide } from 'svelte/transition';
 </script>
 
-<div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+<div
+    class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+    in:slide|local={{ delay: 200 }}
+>
     <div class="flex-shrink-0">
         <img
             class="h-64 w-full object-cover "

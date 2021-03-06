@@ -19,11 +19,12 @@
     </h1>
 
     <p class="text-2xl mb-2 leading-10">
-        I'm a web developer specializing in building user-friendly websites, web
-        apps and mobile apps. I greatly enjoy learning new technologies and have
-        recently been building projects with Svelte/Sapper, Sanity, and
-        serverless technologies like Firebase, Userbase, and Netlify. The latest
-        addition to my programming toolkit is Typescript.
+        I'm a web developer specializing in building user-friendly and
+        performant websites, web apps, and mobile apps. I greatly enjoy learning
+        new technologies and have recently been building projects with
+        Svelte/Sapper, Sanity, and serverless technologies like Firebase,
+        Userbase, and Netlify. The latest addition to my programming toolkit is
+        Typescript.
     </p>
 
     <p class="text-2xl mb-2 leading-10">

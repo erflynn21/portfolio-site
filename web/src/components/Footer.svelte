@@ -3,21 +3,24 @@
 </script>
 
 <footer class="max-w-full font-light py-6 bottom-0 bg-gray-900 text-white">
-    <div class="copyright flex justify-center">
+    <div class="copyright sm:flex justify-center text-center">
         <span class="mx-2">
             Copyright &copy; {year} Evan Flynn
         </span>
-        &middot;
+        <br />
+        <span class="hidden sm:block">&middot;</span>
         <a class="mx-2" target="_top" href="mailto:evan@evanflynn.com"
             >evan@evanflynn.com</a
         >
-        &middot;
+        <br />
+        <span class="hidden sm:block">&middot;</span>
         <span class="mx-2"
             ><a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/erflynn21"
                 ><svg
+                    class="sm:mt-0 w-7 inline-block mt-2"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
@@ -29,13 +32,14 @@
                 ></a
             ></span
         >
-        &middot;
+        <span class="hidden sm:block">&middot;</span>
         <span class="mx-2"
             ><a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/erflynn21/"
                 ><svg
+                    class="sm:mt-0 w-7 inline-block mt-2"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"

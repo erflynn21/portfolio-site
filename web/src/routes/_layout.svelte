@@ -26,6 +26,12 @@
 
 <style>
     main {
-        min-height: calc(100vh - 136px);
+        min-height: calc(100vh - 178px);
+    }
+
+    @media (min-width: 640px) {
+        main {
+            min-height: calc(100vh - 136px);
+        }
     }
 </style>

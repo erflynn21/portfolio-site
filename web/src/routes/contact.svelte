@@ -37,6 +37,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Contact - Evan Flynn</title>
+</svelte:head>
+
 <div class="relative">
     <div class="absolute inset-0">
         <div class="absolute inset-y-0 left-0 w-1/2 " />

@@ -1,11 +1,18 @@
 <script>
     import Footer from '../components/Footer.svelte';
     import Nav from '../components/Nav.svelte';
+    import { stores } from '@sapper/app';
+    import PageLoadingBar from 'sapper-page-loading-bar/PageLoadingBar.svelte';
+    const { preloading } = stores();
 
     export let segment;
 </script>
 
 <Nav {segment} />
+
+<div class="preloading">
+    <PageLoadingBar {preloading} color2="#00C2FF" color1="#008CC6" />
+</div>
 
 <div class="bg-gray-900">
     <main

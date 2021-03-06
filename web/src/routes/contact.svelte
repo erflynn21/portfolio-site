@@ -1,5 +1,5 @@
 <script>
-    import { fade } from 'svelte/transition';
+    import { fade, slide } from 'svelte/transition';
 
     let formData = {
         name: '',
@@ -37,8 +37,8 @@
     }
 </script>
 
-<div class="relative">
-    <div class="absolute inset-0">
+<div class="relative" in:fade|local={{}}>
+    <div class="absolute inset-0" in:slide|local={{ delay: 200 }}>
         <div class="absolute inset-y-0 left-0 w-1/2 " />
     </div>
     <div class="relative max-w-7xl lg:grid lg:grid-cols-5 mt-24">

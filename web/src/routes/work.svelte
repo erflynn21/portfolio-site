@@ -14,7 +14,7 @@
 </script>
 
 <script>
-    import { fade, fly } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     export let projects;
     import Project from '../components/Project.svelte';
 </script>

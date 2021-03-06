@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         'theme-blue': '#00C2FF',
         gray: colors.warmGray,
+        'theme-dark-blue': '#008CC6',
       },
     },
     fontFamily: {
@@ -18,5 +19,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

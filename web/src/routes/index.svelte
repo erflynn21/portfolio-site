@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section name="hero" class="mt-24">
-    <h2 class="text-4xl mb-8">Hi, I'm Evan</h2>
+    <h2 class="text-4xl mb-8">hi, I'm Evan</h2>
 
     <h1 class="text-6xl font-medium mb-8 text-theme-blue">
         I make websites, web apps, and mobile apps.

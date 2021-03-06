@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>Evan Flynn - Home</title>
+    <title>Home - Evan Flynn</title>
 </svelte:head>
 
 <section

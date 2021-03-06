@@ -19,6 +19,10 @@
     import Project from '../components/Project.svelte';
 </script>
 
+<svelte:head>
+    <title>Work - Evan Flynn</title>
+</svelte:head>
+
 <section name="hero" class="mt-24">
     <h1
         class="text-4xl mb-8"

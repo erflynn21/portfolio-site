@@ -1,12 +1,17 @@
 <script>
-    import { fade, slide } from 'svelte/transition';
+    import { fade, slide, fly } from 'svelte/transition';
 </script>
 
 <svelte:head>
     <title>Evan Flynn - Home</title>
 </svelte:head>
 
-<section name="hero" class="mt-24" in:fade|local={{}}>
+<section
+    name="hero"
+    class="mt-24"
+    in:fly|local={{ y: 300, duration: 500, delay: 600 }}
+    out:fly|local={{ x: -1000, duration: 500 }}
+>
     <div in:slide|local={{ duration: 200 }}>
         <h2 class="text-4xl mb-8">hi, I'm Evan</h2>
 
@@ -29,7 +34,12 @@
     </div>
 </section>
 
-<section name="skills" class="" in:fade|local={{ delay: 200 }}>
+<section
+    name="skills"
+    class=""
+    in:fly|local={{ delay: 800, y: 300, duration: 500 }}
+    out:fly|local={{ x: 1000, duration: 500 }}
+>
     <h2 class="text-theme-blue text-4xl mt-8 mb-4 font-medium">Skills:</h2>
     <p class="text-lg tracking-wider">
         HTML | CSS | Javascript | Typescript | Svelte | Sapper | Tailwind CSS |

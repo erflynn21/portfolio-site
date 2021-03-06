@@ -1,5 +1,5 @@
 <script>
-    import { fade, slide } from 'svelte/transition';
+    import { fade, slide, fly } from 'svelte/transition';
 
     let formData = {
         name: '',
@@ -37,12 +37,16 @@
     }
 </script>
 
-<div class="relative" in:fade|local={{}}>
-    <div class="absolute inset-0" in:slide|local={{ delay: 200 }}>
+<div class="relative">
+    <div class="absolute inset-0">
         <div class="absolute inset-y-0 left-0 w-1/2 " />
     </div>
     <div class="relative max-w-7xl lg:grid lg:grid-cols-5 mt-24">
-        <div class="lg:col-span-2 xl:pr-12">
+        <div
+            class="lg:col-span-2 xl:pr-12"
+            in:fly|local={{ x: -1000, delay: 600, duration: 500 }}
+            out:fly|local={{ y: 1000, duration: 500 }}
+        >
             <div class="max-w-lg">
                 <h2 class="text-4xl mb-8">get in touch</h2>
                 <p class="mt-3 text-lg leading-6 ">
@@ -105,7 +109,11 @@
                 </dl>
             </div>
         </div>
-        <div class="mt-8 lg:mt-2 lg:col-span-3 lg:ml-8">
+        <div
+            class="mt-8 lg:mt-2 lg:col-span-3 lg:ml-8"
+            in:fly|local={{ x: 1000, delay: 600, duration: 500 }}
+            out:fly|local={{ y: -1000, duration: 500 }}
+        >
             <div class="max-w-lg lg:max-w-none">
                 <form
                     name="contact"

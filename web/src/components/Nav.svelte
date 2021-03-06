@@ -2,7 +2,7 @@
     export let segment;
 </script>
 
-<nav class="py-4 bg-theme-gray relative">
+<nav class="py-4 bg-gray-900 text-white relative">
     <div class="absolute top-4 left-6 md:left-8 lg:left-16">
         <img src="favicon.png" alt="evan flynn logo" class="h-10" />
     </div>
@@ -12,7 +12,7 @@
                 class="{segment === 'home'
                     ? 'selected'
                     : ''} mx-4 font-light text-base"
-                href="home">home</a
+                href=".">home</a
             >
         </li>
         <li>

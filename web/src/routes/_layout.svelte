@@ -6,9 +6,9 @@
 
 <Nav {segment} />
 
-<div class="bg-theme-gray">
+<div class="bg-gray-900">
     <main
-        class="font-light relative my-0 box-border pt-2 pb-12 max-w-5xl mx-6 md:mx-8 lg:mx-16"
+        class="font-light text-white relative my-0 box-border pt-2 pb-12 max-w-5xl mx-6 md:mx-8 lg:mx-16"
     >
         <slot />
     </main>

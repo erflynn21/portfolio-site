@@ -22,3 +22,14 @@
         apps for performance and Jamstack technologies.
     </p>
 </section>
+
+<section name="skills" class="text-center">
+    <h2 class="text-theme-blue text-4xl mt-8 mb-4 font-medium">Skills:</h2>
+    <p class="text-center text-lg tracking-wider">
+        HTML | CSS | Javascript | Typescript | Svelte | Sapper | Tailwind CSS |
+        Nodejs | MongoDB | Rest/GraphQL APIS | Meteor | Python | Userbase |
+        Firebase | Capacitor | Framework7 | Dev Tools | Git | Github | Netlify |
+        CI/CD Workflows | Heroku | Apple App Store Deployment | Google Cloud
+        Platform | Cloudflare
+    </p>
+</section>

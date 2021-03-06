@@ -1,20 +1,11 @@
 <script>
-    let project = {
-        name: 'Expat Expenses Landing Page',
-        mainImage:
-            'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixqx=XHWnHlvfb8&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-        url: 'https://expatexpenses.com/',
-        description:
-            'Landing page developed in Sapper and Tailwind, hosted on Netlify.',
-        status: 'Finished',
-        github: 'https://github.com/erflynn21/expat-expenses-website',
-    };
+    export let project;
 </script>
 
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
     <div class="flex-shrink-0">
         <img
-            class="h-64 w-full object-cover"
+            class="h-64 w-full object-cover "
             src={project.mainImage}
             alt="project image"
         />
@@ -70,6 +61,9 @@
                 >
                 <p>Live URL</p>
             </a>
+            <div class="flex space-x-1 ml-6 text-gray-500 items-center">
+                <p>Status: {project.status}</p>
+            </div>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
     <div class="absolute top-4 left-6 md:left-8 lg:left-16">
         <img src="favicon.png" alt="evan flynn logo" class="h-10" />
     </div>
-    <ul class="flex items-center justify-end mt-4">
+    <ul class="flex items-center justify-end mt-2">
         <li>
             <a
                 class="{segment === 'home'

@@ -1,6 +1,11 @@
 export default {
   widgets: [
-    {name: 'structure-menu'},
+    {
+      name: 'sanity-tutorials',
+      options: {
+        templateRepoId: 'sanity-io/sanity-template-gatsby-blog'
+      }
+    },
     {
       name: 'project-info',
       options: {
@@ -12,16 +17,16 @@ export default {
                 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
-                  buildHookId: '60407e50cfeee779f268d2a9',
+                  buildHookId: '<#<deployments.studio.providerInfo.buildHookId>#>',
                   title: 'Sanity Studio',
-                  name: 'portfolio-site-studio',
-                  apiId: '97dad63a-5f99-41e9-9eb5-e8502899dfca'
+                  name: '<#<deployments.studio.providerInfo.siteName>#>',
+                  apiId: '<#<deployments.studio.providerInfo.siteId>#>'
                 },
                 {
-                  buildHookId: '60407e504a3de87dfff825da',
+                  buildHookId: '<#<deployments.web.providerInfo.buildHookId>#>',
                   title: 'Blog Website',
-                  name: 'portfolio-site-web',
-                  apiId: '59d33e0a-b004-4b44-bf11-d36aab527f9d'
+                  name: '<#<deployments.web.providerInfo.siteName>#>',
+                  apiId: '<#<deployments.web.providerInfo.siteId>#>'
                 }
               ]
             }
@@ -30,10 +35,10 @@ export default {
         data: [
           {
             title: 'GitHub repo',
-            value: 'https://github.com/erflynn21/portfolio-site',
+            value: 'https://github.com/<#<repository.owner>#>/<#<repository.name>#>',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://portfolio-site-web.netlify.app', category: 'apps'}
+          {title: 'Frontend', value: '<#<deployments.web.url>#>', category: 'apps'}
         ]
       }
     },

@@ -20,7 +20,7 @@
         rel="noopener noreferrer"
         href="https://github.com/erflynn21"
         ><svg
-          class="sm:mt-0 w-7 inline-block mt-2 fill-theme-blue"
+          class="sm:mt-0 w-7 inline-block mt-2 fill-primary"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -38,7 +38,7 @@
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/erflynn21/"
         ><svg
-          class="sm:mt-0 w-7 inline-block mt-2 fill-theme-blue"
+          class="sm:mt-0 w-7 inline-block mt-2 fill-primary"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"

@@ -80,7 +80,7 @@
       <li>
         <a
           class="{url === ''
-            ? 'border-b border-theme-blue'
+            ? 'border-b border-primary'
             : ''} mx-4 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href=".">home</a
@@ -89,7 +89,7 @@
       <li>
         <a
           class="{url === 'work'
-            ? 'border-b border-theme-blue'
+            ? 'border-b border-primary'
             : ''} mx-4 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href="work">work</a
@@ -106,7 +106,7 @@
       <li>
         <a
           class="{url === 'contact'
-            ? 'border-b border-theme-blue'
+            ? 'border-b border-primary'
             : ''} mx-4 mr-6 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href="contact">contact</a
@@ -128,7 +128,7 @@
             /></svg
           >
         </a>
-        <ul class="bg-base-100 border border-theme-blue">
+        <ul class="bg-base-100 border border-primary">
           <li>
             <button data-set-theme="light" data-act-class="ACTIVECLASS"
               >Light</button

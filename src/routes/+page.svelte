@@ -14,7 +14,7 @@
 >
   <h2 class="text-4xl mb-8">hi, I'm Evan</h2>
 
-  <h1 class="text-6xl font-medium mb-8 text-theme-blue">
+  <h1 class="text-6xl font-medium mb-8 text-primary">
     I make websites, web apps, and mobile apps.
   </h1>
 
@@ -38,7 +38,7 @@
   in:fly|local={{ delay: 800, y: 300, duration: 500 }}
   out:fly|local={{ x: 1000, duration: 500 }}
 >
-  <h2 class="text-theme-blue text-4xl mt-8 mb-4 font-medium">Skills:</h2>
+  <h2 class="text-primary text-4xl mt-8 mb-4 font-medium">Skills:</h2>
   <p class="text-lg tracking-wider">
     HTML | CSS | Javascript | Typescript | Svelte | Sapper | Tailwind CSS |
     Nodejs | MongoDB | Rest/GraphQL APIS | Meteor | Python | Userbase | Firebase

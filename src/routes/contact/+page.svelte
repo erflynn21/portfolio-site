@@ -158,7 +158,7 @@
           <div>
             <button
               type="submit"
-              class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md bg-primary hover:bg-primary-focus"
+              class="inline-flex justify-center py-3 px-6 border border-transparent text-base-300 shadow-sm font-medium rounded-md bg-primary hover:bg-primary-focus"
             >
               Submit
             </button>

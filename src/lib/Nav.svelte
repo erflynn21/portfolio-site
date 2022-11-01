@@ -8,70 +8,9 @@
   });
 </script>
 
-<!-- <nav class="py-4 relative">
-  <a href="." class="absolute top-4 left-6 md:left-8 lg:left-24">
-    <img src="favicon.png" alt="evan flynn logo" class="h-10" />
-  </a>
-  <ul class="flex items-center justify-end mt-2">
-    <li>
-      <a
-        class="{url === ''
-          ? 'border-b border-theme-blue'
-          : ''} mx-4 font-light text-base"
-        href=".">home</a
-      >
-    </li>
-    <li>
-      <a
-        class="{url === 'work'
-          ? 'border-b border-theme-blue'
-          : ''} mx-4 font-light text-base"
-        href="work">work</a
-      >
-    </li>
-    <li>
-            <a
-                class="{url === 'blog'
-                    ? 'border-b border-theme-blue'
-                    : ''} mx-6 font-light text-lg"
-                href="blog">blog</a
-            >
-        </li>
-    <li>
-      <a
-        class="{url === 'contact'
-          ? 'border-b border-theme-blue'
-          : ''} mx-4 mr-6 font-light text-base"
-        href="contact">contact</a
-      >
-    </li>
-    <li tabindex="0">
-      <a on:click={() => (themePickerOpen = !themePickerOpen)}>
-        Theme
-        <svg
-          class="fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          ><path
-            d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-          /></svg
-        >
-      </a>
-      {#if themePickerOpen}
-        <ul class="p-2 bg-base-100">
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
-        </ul>
-      {/if}
-    </li>
-  </ul>
-</nav> -->
-
 <div class="navbar bg-base-100 py-4 pr-4">
   <div class="flex-1">
-    <a href="." class="absolute top-4 left-6 md:left-8 lg:left-24">
+    <a href="." class="absolute top-6 left-6 md:left-8 lg:left-24">
       <img src="favicon.png" alt="evan flynn logo" class="h-10" />
     </a>
   </div>
@@ -81,7 +20,7 @@
         <a
           class="{url === ''
             ? 'border-b border-primary'
-            : ''} mx-4 font-light text-base hover: bg-transparent"
+            : ''} mx-2 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href=".">home</a
         >
@@ -90,7 +29,7 @@
         <a
           class="{url === 'work'
             ? 'border-b border-primary'
-            : ''} mx-4 font-light text-base hover: bg-transparent"
+            : ''} mx-2 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href="work">work</a
         >
@@ -107,13 +46,13 @@
         <a
           class="{url === 'contact'
             ? 'border-b border-primary'
-            : ''} mx-4 mr-6 font-light text-base hover: bg-transparent"
+            : ''} mx-2 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href="contact">contact</a
         >
       </li>
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-      <li tabindex="0">
+      <li tabindex="0" class="mr-4 dropdown-end">
         <!-- svelte-ignore a11y-missing-attribute -->
         <a class="hover:bg-transparent">
           theme
@@ -128,7 +67,9 @@
             /></svg
           >
         </a>
-        <ul class="bg-base-100 border border-primary">
+        <ul
+          class="z-10 bg-base-100 border border-primary dropdown-content overflow-y-auto max-h-96"
+        >
           <li>
             <button data-set-theme="light" data-act-class="ACTIVECLASS"
               >Light</button

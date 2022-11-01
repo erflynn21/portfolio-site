@@ -15,20 +15,20 @@
   <h2 class="text-4xl mb-8">hi, I'm Evan</h2>
 
   <h1 class="text-6xl font-medium mb-8 text-primary">
-    I make websites, web apps, and mobile apps.
+    I make user-friendly and performant websites, web apps, and mobile apps.
   </h1>
 
-  <p class="text-2xl mb-2 leading-10">
-    I'm a web developer specializing in building user-friendly and performant
-    websites, web apps, and mobile apps. I greatly enjoy learning new
-    technologies and have recently been building projects with Svelte/Sapper,
-    Sanity, and serverless technologies like Firebase, Userbase, and Netlify.
-    The latest addition to my programming toolkit is Typescript.
+  <p class="text-2xl mb-4 leading-10">
+    I'm a Senior Technical Support Engineer at Proxyrack and freelance web and
+    app developer. I greatly enjoy learning new technologies and have recently
+    been building projects with Svelte/Sveltekit, Sanity, Firebase, Userbase,
+    and Cloudflare. The latest addition to my programming toolkit is Typescript.
   </p>
 
-  <p class="text-2xl mb-2 leading-10">
+  <p class="text-2xl mb-4 leading-10">
     I'm currently interested in learning more about optomizing websites and apps
-    for performance and Jamstack technologies.
+    for performance and Jamstack technologies, as well as no/low-code tools like
+    Flutterflow.
   </p>
 </section>
 
@@ -39,11 +39,16 @@
   out:fly|local={{ x: 1000, duration: 500 }}
 >
   <h2 class="text-primary text-4xl mt-8 mb-4 font-medium">Skills:</h2>
+  <p class="text-lg tracking-wider mb-4">
+    Frontend: HTML | CSS | Javascript | Typescript | Svelte | Sveltekit |
+    Tailwind CSS | Capacitor | Framework7
+  </p>
+  <p class="text-lg tracking-wider mb-4">
+    Backend/Serverless: Nodejs | Firebase | MongoDB | Rest/GraphQL APIS |
+    Userbase | Cloudflare | Google Cloud Platform
+  </p>
   <p class="text-lg tracking-wider">
-    HTML | CSS | Javascript | Typescript | Svelte | Sapper | Tailwind CSS |
-    Nodejs | MongoDB | Rest/GraphQL APIS | Meteor | Python | Userbase | Firebase
-    | Capacitor | Framework7 | Dev Tools | Git | Github | Netlify | CI/CD
-    Workflows | Heroku | Apple App Store Deployment | Google Cloud Platform |
-    Cloudflare
+    Other: Dev Tools | Git | Github | CI/CD Workflows | Apple App Store
+    Deployment
   </p>
 </section>

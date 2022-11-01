@@ -60,7 +60,7 @@
             <dt class="sr-only">Phone number</dt>
             <dd class="flex">
               <svg
-                class="flex-shrink-0 h-6 w-6 text-gray-400"
+                class="flex-shrink-0 h-6 w-6 "
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -83,7 +83,7 @@
             <dt class="sr-only">Email</dt>
             <dd class="flex">
               <svg
-                class="flex-shrink-0 h-6 w-6 text-gray-400"
+                class="flex-shrink-0 h-6 w-6 "
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -128,7 +128,7 @@
               id="full_name"
               autocomplete="name"
               bind:value={formData.name}
-              class="block w-full shadow-sm py-3 px-4  focus:ring-theme-blue focus:border-theme-blue rounded-md"
+              class="input input-bordered w-full py-3 px-4"
               placeholder="Name"
             />
           </div>
@@ -140,7 +140,7 @@
               type="email"
               autocomplete="email"
               bind:value={formData.email}
-              class="block w-full shadow-sm py-3 px-4 focus:ring-theme-blue focus:border-theme-blue rounded-md"
+              class="input input-bordered w-full py-3 px-4"
               placeholder="Email"
             />
           </div>
@@ -151,14 +151,14 @@
               name="message"
               rows="4"
               bind:value={formData.message}
-              class="block w-full shadow-sm py-3 text-black px-4 focus:ring-theme-blue focus:border-theme-blue rounded-md"
+              class="textarea textarea-bordered w-full py-3 px-4"
               placeholder="Message"
             />
           </div>
           <div>
             <button
               type="submit"
-              class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-theme-blue hover:bg-theme-dark-blue"
+              class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md bg-primary hover:bg-primary-focus"
             >
               Submit
             </button>

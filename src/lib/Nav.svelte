@@ -11,7 +11,11 @@
 <div class="navbar bg-base-100 py-4 pr-4">
   <div class="flex-1">
     <a href="." class="absolute top-6 left-6 md:left-8 lg:left-24">
-      <img src="favicon.png" alt="evan flynn logo" class="h-10" />
+      <img
+        src="favicon.png"
+        alt="evan flynn logo"
+        class="h-10 bg-primary rounded-full"
+      />
     </a>
   </div>
   <div class="flex-none">

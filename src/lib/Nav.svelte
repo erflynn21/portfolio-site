@@ -31,6 +31,7 @@
       </li>
       <li>
         <a
+          data-sveltekit-prefetch
           class="{url === 'work'
             ? 'border-b border-primary'
             : ''} mx-2 font-light text-base hover: bg-transparent"

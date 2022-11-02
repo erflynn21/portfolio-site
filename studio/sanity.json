@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "Portfolio Site"
+    "name": "Evan Flynn Portfolio Site"
   },
   "api": {
     "projectId": "1libgah6",
@@ -14,20 +14,20 @@
     "@sanity/default-login",
     "@sanity/dashboard",
     "@sanity/desk-tool",
-    "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
     "dashboard-widget-netlify",
     "@sanity/code-input",
-    "@sanity/vision"
+    "asset-source-unsplash"
   ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema.js"
-    },
-    {
-      "name": "part:@sanity/desk-tool/structure",
-      "path": "./deskStructure.js"
     },
     {
       "implements": "part:@sanity/dashboard/config",

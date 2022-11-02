@@ -21,8 +21,9 @@
   <p class="text-2xl mb-4 leading-10">
     I'm a Senior Technical Support Engineer at Proxyrack and freelance web and
     app developer. I greatly enjoy learning new technologies and have recently
-    been building projects with Svelte/Sveltekit, Sanity, Firebase, Userbase,
-    and Cloudflare. The latest addition to my programming toolkit is Typescript.
+    been building projects with Svelte/Sveltekit, Tailwind, Sanity, Firebase,
+    Userbase, and Cloudflare. The latest addition to my programming toolkit is
+    Typescript.
   </p>
 
   <p class="text-2xl mb-4 leading-10">

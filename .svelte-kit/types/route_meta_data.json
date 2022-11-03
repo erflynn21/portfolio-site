@@ -1,0 +1,7 @@
+{
+	"": [],
+	"contact": [],
+	"work": [
+		"src/routes/work/+page.js"
+	]
+}

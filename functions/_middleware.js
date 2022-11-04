@@ -18,11 +18,11 @@ export const onRequest = mailchannelsPlugin({
           text: params.formData.get("message"),
       }
   },
-  respondWith: () => {
-    return new Response(
-      `Thank you for getting in touch! I will respond as soon as possible.`
-    );
-  },
+  respondWith: () =>
+    new Response(null, {
+      status: 302,
+      headers: { Location: "/" },
+    }),
 });
 
 // import mailChannelsPlugin from "@cloudflare/pages-plugin-mailchannels";

@@ -7,24 +7,24 @@
     message: "",
   };
 
-  let displaySuccess = false;
+  // let displaySuccess = false;
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //     )
+  //     .join("&");
+  // };
 
   function handleSubmit() {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData }),
-    })
-      .then(() => (displaySuccess = true))
-      .catch((error) => alert(error));
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "contact", ...formData }),
+    // })
+    //   .then(() => (displaySuccess = true))
+    //   .catch((error) => alert(error));
 
     formData = {
       name: "",
@@ -113,13 +113,7 @@
       out:fly|local={{ y: -1000, duration: 500 }}
     >
       <div class="max-w-lg lg:max-w-none">
-        <form
-          name="contact"
-          action="POST"
-          netlify
-          on:submit|preventDefault={handleSubmit}
-          class="grid grid-cols-1 gap-y-6"
-        >
+        <form data-static-form-name="contact" class="grid grid-cols-1 gap-y-6">
           <div>
             <label for="full_name" class="sr-only">Name</label>
             <input
@@ -127,6 +121,7 @@
               name="name"
               id="full_name"
               autocomplete="name"
+              on:submit|preventDefault={handleSubmit}
               bind:value={formData.name}
               class="input input-bordered w-full py-3 px-4"
               placeholder="Name"

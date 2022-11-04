@@ -112,6 +112,7 @@
       in:fly|local={{ x: 1000, delay: 600, duration: 500 }}
       out:fly|local={{ y: -1000, duration: 500 }}
     >
+      <!-- on:submit|preventDefault={handleSubmit} -->
       <div class="max-w-lg lg:max-w-none">
         <form data-static-form-name="contact" class="grid grid-cols-1 gap-y-6">
           <div>
@@ -121,7 +122,6 @@
               name="name"
               id="full_name"
               autocomplete="name"
-              on:submit|preventDefault={handleSubmit}
               bind:value={formData.name}
               class="input input-bordered w-full py-3 px-4"
               placeholder="Name"

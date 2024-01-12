@@ -19,17 +19,17 @@
   </h1>
 
   <p class="text-2xl mb-4 leading-10">
-    I'm a Senior Technical Support Engineer at Proxyrack and freelance web and
-    app developer. I greatly enjoy learning new technologies and have recently
-    been building projects with Svelte/Sveltekit, Tailwind, Sanity, Firebase,
-    Userbase, and Cloudflare. The latest addition to my programming toolkit is
-    Typescript.
+    I'm a Senior Technical Support Engineer at Proxyrack and web/mobile app
+    developer in my free time. I greatly enjoy learning new technologies and
+    have recently been building projects with Flutterflow, Svelte/Sveltekit,
+    Tailwind, Sanity, Firebase, Userbase, and Cloudflare.
   </p>
 
   <p class="text-2xl mb-4 leading-10">
-    I'm currently interested in learning more about optomizing websites and apps
-    for performance and Jamstack technologies, as well as no/low-code tools like
-    Flutterflow.
+    I'm currently interested in learning building more in no/low-code tools like
+    Flutterflow, Framer, and Webflow. I am also passionate about optomizing
+    websites and mobile apps for performance with technologies like
+    Svelte/Sveltekit, Tailwind, and Cloudflare.
   </p>
 </section>
 
@@ -41,8 +41,11 @@
 >
   <h2 class="text-primary text-4xl mt-8 mb-4 font-medium">Skills:</h2>
   <p class="text-lg tracking-wider mb-4">
-    Frontend: HTML | CSS | Javascript | Typescript | Svelte | Sveltekit |
-    Tailwind CSS | Capacitor | Framework7
+    No/Low-Code: Flutterflow | Intercom | Notion | Webflow | Zapier
+  </p>
+  <p class="text-lg tracking-wider mb-4">
+    Frontend: HTML | CSS | Javascript | Svelte | Sveltekit | Tailwind CSS |
+    Capacitor | Framework7
   </p>
   <p class="text-lg tracking-wider mb-4">
     Backend/Serverless: Nodejs | Firebase | MongoDB | Rest/GraphQL APIS |

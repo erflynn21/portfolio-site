@@ -19,10 +19,10 @@
   </h1>
 
   <p class="text-2xl mb-4 leading-10">
-    I'm a Senior Technical Support Engineer at Proxyrack and web/mobile app
-    developer in my free time. I greatly enjoy learning new technologies and
-    have recently been building projects with Flutterflow, Svelte/Sveltekit,
-    Tailwind, Sanity, Firebase, Userbase, and Cloudflare.
+    I'm a Technical Support Engineer and web/mobile app developer in my free
+    time. I greatly enjoy learning new technologies and have recently been
+    building projects with Flutterflow, Svelte/Sveltekit, Tailwind, Sanity,
+    Firebase, Userbase, and Cloudflare.
   </p>
 
   <p class="text-2xl mb-4 leading-10">

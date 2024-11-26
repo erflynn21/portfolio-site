@@ -15,7 +15,7 @@
   <h2 class="text-4xl mb-8">hi, I'm Evan</h2>
 
   <h1 class="text-6xl font-medium mb-8 text-primary">
-    I make greater user experiences through technical support, user-friendly and
+    I make greater user experiences through technical support and user-friendly/
     performant websites, web apps, and mobile apps.
   </h1>
 

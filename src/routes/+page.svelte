@@ -15,7 +15,8 @@
   <h2 class="text-4xl mb-8">hi, I'm Evan</h2>
 
   <h1 class="text-6xl font-medium mb-8 text-primary">
-    I make user-friendly and performant websites, web apps, and mobile apps.
+    I make greater user experiences through technical support, user-friendly and
+    performant websites, web apps, and mobile apps.
   </h1>
 
   <p class="text-2xl mb-4 leading-10">

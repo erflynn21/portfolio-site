@@ -20,7 +20,7 @@
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal p-0">
-      <li>
+      <!-- <li>
         <a
           class="{url === ''
             ? 'border-b border-primary'
@@ -28,7 +28,7 @@
           style="border-radius: 0px;"
           href=".">home</a
         >
-      </li>
+      </li> -->
       <li>
         <a
           data-sveltekit-prefetch

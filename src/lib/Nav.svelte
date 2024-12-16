@@ -8,7 +8,7 @@
   });
 </script>
 
-<div class="navbar bg-base-100 py-4 pr-4">
+<div class="navbar bg-base-100 py-4">
   <div class="flex-1">
     <a href="." class="absolute top-6 left-6 md:left-8 lg:left-24">
       <img
@@ -34,7 +34,7 @@
           data-sveltekit-prefetch
           class="{url === 'work'
             ? 'border-b border-primary'
-            : ''} mx-2 font-light text-base hover: bg-transparent"
+            : ''} mx-1 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href="work">work</a
         >
@@ -51,13 +51,13 @@
         <a
           class="{url === 'contact'
             ? 'border-b border-primary'
-            : ''} mx-2 font-light text-base hover: bg-transparent"
+            : ''} mx-1 font-light text-base hover: bg-transparent"
           style="border-radius: 0px;"
           href="contact">contact</a
         >
       </li>
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-      <li tabindex="0" class="mr-4 dropdown-end">
+      <li tabindex="0" class=" dropdown-end">
         <!-- svelte-ignore a11y-missing-attribute -->
         <a class="hover:bg-transparent">
           theme

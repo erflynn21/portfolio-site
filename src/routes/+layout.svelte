@@ -6,12 +6,15 @@
   import { navigating } from "$app/stores";
   import "nprogress/nprogress.css";
   import { onMount } from "svelte";
-  import { themeChange } from "theme-change";
+  import { theme } from "$lib/themeStore";
 
-  // NOTE: the element that is using one of the theme attributes must be in the DOM on mount
+  let currentTheme = 'dark';
+  theme.subscribe(t => {
+    currentTheme = t;
+  });
+
   onMount(() => {
-    themeChange(false);
-    // 👆 false parameter is required for svelte
+    document.documentElement.setAttribute('data-theme', `portfolio-${currentTheme}`);
   });
 
   NProgress.configure({
@@ -29,11 +32,11 @@
   }
 </script>
 
-<div data-theme="">
+<div data-theme="portfolio-{currentTheme}">
   <Nav />
 
   <main
-    class="font-light relative my-0 box-border pt-2 pb-12 max-w-5xl mx-6 md:mx-8 lg:mx-24"
+    class="relative my-0 box-border w-full"
   >
     <slot />
   </main>

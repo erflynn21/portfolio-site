@@ -1,4 +1,43 @@
-/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-dark: #0c0d10;
+    --color-bg-light: #f9f9fc;
+    --color-text-primary-dark: #f2f3f5;
+    --color-text-primary-light: #1a1b1e;
+    --color-text-secondary-dark: #b3b7c0;
+    --color-text-secondary-light: #5a5f6e;
+    --color-text-tertiary-dark: #7a7f8a;
+    --color-text-tertiary-light: #8a8f99;
+    --color-accent-dark: #6ea8ff;
+    --color-accent-light: #2b5fff;
+    --color-border-dark: rgba(255, 255, 255, 0.09);
+    --color-border-light: rgba(0, 0, 0, 0.08);
+    --color-card-bg-dark: rgba(255, 255, 255, 0.02);
+    --color-card-bg-light: rgba(0, 0, 0, 0.01);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content;
+  }
+}
+
+@keyframes fadeUpBig {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

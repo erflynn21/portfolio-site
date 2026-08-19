@@ -214,9 +214,6 @@
   <p class="font-mono text-xs uppercase tracking-[0.14em] text-primary mb-6">
     ● Let's connect
   </p>
-  <h2 class="font-serif text-[clamp(40px,6.5vw,82px)] leading-[1.02] mb-8">
-    Always up for a good conversation.
-  </h2>
 
   <div class="flex flex-wrap justify-center gap-4 mb-8">
     <a
@@ -226,27 +223,12 @@
       evan@evanflynn.com
     </a>
     <a
-      href="/resume.pdf"
-      download
-      class="px-7 py-[15px] rounded-full border border-primary text-primary font-mono text-sm font-semibold hover:translate-y-[-2px] transition-transform"
-    >
-      Download résumé
-    </a>
-    <a
       href="https://linkedin.com/in/evanflynn"
       target="_blank"
       rel="noopener noreferrer"
       class="px-7 py-[15px] rounded-full border border-primary text-primary font-mono text-sm font-semibold hover:translate-y-[-2px] transition-transform"
     >
       LinkedIn
-    </a>
-    <a
-      href="https://github.com/evanflynn"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="px-7 py-[15px] rounded-full border border-primary text-primary font-mono text-sm font-semibold hover:translate-y-[-2px] transition-transform"
-    >
-      GitHub
     </a>
   </div>
 

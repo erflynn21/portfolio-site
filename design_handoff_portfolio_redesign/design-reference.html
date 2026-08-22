@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  @keyframes fadeUpBig{from{transform:translateY(30px);}to{transform:translateY(0);}}
+  [data-reveal]{animation:fadeUpBig .9s cubic-bezier(.2,.7,.2,1) both;}
+</style>
+</helmet>
+
+<div data-theme="{{ theme }}" style="min-height:100vh;background:{{ bgColor }};background-image:{{ bgGradient }};color:{{ textColor }};font-family:'Space Grotesk',sans-serif;transition:background .4s,color .4s;">
+
+  <!-- nav + theme toggle -->
+  <div style="max-width:1180px;margin:0 auto;padding:{{ navPad }};display:flex;justify-content:space-between;align-items:center;">
+    <div style="font:500 13px/1 'JetBrains Mono',monospace;letter-spacing:0.1em;text-transform:uppercase;color:{{ navText }};">Evan Flynn</div>
+    <div style="display:flex;gap:30px;align-items:center;font:400 13px/1 'JetBrains Mono',monospace;color:{{ linkText }};">
+      <a href="#work" style-hover="{{ linkHover }}">Work</a>
+      <a href="#contact" style-hover="{{ linkHover }}">Contact</a>
+      <button onClick="{{ toggleTheme }}" style="background:none;border:1px solid {{ accentColor }};color:{{ accentColor }};font:400 11px/1 'JetBrains Mono',monospace;padding:6px 11px;border-radius:6px;cursor:pointer;transition:all .3s;" style-hover="{{ themeHover }}">{{ themeLabel }}</button>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="max-width:1180px;margin:0 auto;padding:{{ heroPad }};">
+    <div style="font:400 13px/1 'JetBrains Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:{{ accentColor }};margin-bottom:34px;" data-reveal="1">Implementation + Support Engineer @ Moov</div>
+    <h1 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(46px,8.2vw,108px);line-height:0.98;letter-spacing:-0.01em;margin:0 0 36px;max-width:14ch;" data-reveal="1">Bridging people and the software they rely on.</h1>
+    <p style="font-size:clamp(17px,2vw,21px);line-height:1.6;color:{{ secondaryText }};max-width:600px;margin:0 0 44px;" data-reveal="1">I support and implement software for the people who depend on it daily — and build performant web &amp; mobile apps that prove how it should feel.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;" data-reveal="1">
+      <a href="#work" style="background:{{ accentColor }};color:{{ accentTextColor }};font-weight:600;font-size:14px;padding:15px 28px;border-radius:100px;" style-hover="{{ btnHover }}">See selected work</a>
+      <a href="#contact" style="border:1px solid {{ borderColor }};font-size:14px;font-weight:500;padding:15px 28px;border-radius:100px;color:{{ textColor }};" style-hover="{{ ghostHover }}">Get in touch</a>
+    </div>
+  </div>
+
+  <!-- stats -->
+  <div style="border-top:1px solid {{ borderColor }};">
+    <div style="max-width:1180px;margin:0 auto;padding:50px 44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div data-reveal="1">
+          <div style="font-family:'Instrument Serif',serif;font-size:54px;line-height:0.9;color:{{ accentColor }};">{{ s.k }}</div>
+          <div style="font-size:14px;color:{{ textColor }};margin-top:10px;font-weight:500;">{{ s.l }}</div>
+          <div style="font:400 12px/1.4 'JetBrains Mono',monospace;color:{{ tertiaryText }};margin-top:5px;">{{ s.s }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- work -->
+  <div id="work" style="border-top:1px solid {{ borderColor }};">
+    <div style="max-width:1180px;margin:0 auto;padding:80px 44px;">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:48px;" data-reveal="1"><span style="font:400 13px/1 'JetBrains Mono',monospace;color:{{ accentColor }};">01</span><span style="font-family:'Instrument Serif',serif;font-size:32px;">Selected projects</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;">
+        <sc-for list="{{ work }}" as="p" hint-placeholder-count="3">
+          <div data-reveal="1" style="display:flex;flex-direction:column;border:1px solid {{ borderColor }};border-radius:16px;background:{{ cardBg }};padding:32px 30px;transition:transform .3s,border-color .3s;" style-hover="{{ cardHover }}">
+            <div style="font:400 12px/1 'JetBrains Mono',monospace;color:{{ tertiaryText }};margin-bottom:20px;">{{ p.org }} · {{ p.cat }}</div>
+            <div style="font-family:'Instrument Serif',serif;font-size:38px;line-height:1.02;color:{{ accentColor }};margin-bottom:20px;">{{ p.metric }}</div>
+            <div style="font-size:20px;font-weight:600;margin-bottom:10px;">{{ p.name }}</div>
+            <p style="font-size:14px;line-height:1.65;color:{{ secondaryText }};margin:0 0 20px;">{{ p.desc }}</p>
+            
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- also builds -->
+  <div style="border-top:1px solid {{ borderColor }};">
+    <div style="max-width:1180px;margin:0 auto;padding:80px 44px;">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;" data-reveal="1"><span style="font:400 13px/1 'JetBrains Mono',monospace;color:{{ accentColor }};">02</span><span style="font-family:'Instrument Serif',serif;font-size:32px;">Also builds</span></div>
+      <p style="font-size:15px;line-height:1.6;color:{{ secondaryText }};margin:0 0 44px;max-width:540px;" data-reveal="1">Side projects — web &amp; mobile apps I design and ship end to end.&nbsp;</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+          <a href="{{ p.url }}" target="_blank" data-reveal="1" style="display:block;border:1px solid {{ borderColor }};border-radius:14px;overflow:hidden;background:{{ cardBg }};transition:transform .3s,border-color .3s;" style-hover="{{ cardHover }}">
+            <div style="height:140px;overflow:hidden;background:{{ imgBg }};"><img src="{{ p.img }}" alt="{{ p.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+            <div style="padding:18px 20px 20px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;"><span style="font-size:16px;font-weight:600;">{{ p.name }}</span><span style="font:400 10px/1 'JetBrains Mono',monospace;color:{{ accentColor }};">{{ p.status }}</span></div>
+              <div style="font:400 11px/1.4 'JetBrains Mono',monospace;color:{{ tertiaryText }};">{{ p.stack }}</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- skills -->
+  <div style="border-top:1px solid {{ borderColor }};">
+    <div style="max-width:1180px;margin:0 auto;padding:80px 44px;">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:48px;" data-reveal="1"><span style="font:400 13px/1 'JetBrains Mono',monospace;color:{{ accentColor }};">03</span><span style="font-family:'Instrument Serif',serif;font-size:32px;">Toolkit</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;">
+        <sc-for list="{{ skills }}" as="g" hint-placeholder-count="4">
+          <div data-reveal="1">
+            <div style="font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:0.1em;text-transform:uppercase;color:{{ tertiaryText }};margin-bottom:18px;">{{ g.label }}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
+                <span style="font-size:14px;color:{{ textColor }};padding:7px 13px;border:1px solid {{ borderColor }};border-radius:100px;background:{{ chipBg }};">{{ it }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font:400 12px/1.6 'JetBrains Mono',monospace;color:{{ tertiaryText }};margin:28px 0 0;">Also comfortable with Adobe Creative Suite, Final Cut Pro, Google Workspace, Audacity — and a fluent Mandarin Chinese speaker.</p>
+    </div>
+  </div>
+
+  <!-- contact -->
+  <div id="contact" style="border-top:1px solid {{ borderColor }};">
+    <div style="max-width:1180px;margin:0 auto;padding:110px 44px 70px;text-align:center;" data-reveal="1">
+      
+      
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:24px;">
+        <a href="mailto:evan@evanflynn.com" style="background:{{ accentColor }};color:{{ accentTextColor }};font-weight:600;font-size:14px;padding:15px 30px;border-radius:100px;" style-hover="{{ btnHover }}">evan@evanflynn.com</a>
+        
+        <a href="https://www.linkedin.com/in/erflynn21/" target="_blank" style="border:1px solid {{ borderColor }};font-size:14px;font-weight:500;padding:15px 30px;border-radius:100px;color:{{ textColor }};" style-hover="{{ ghostHover }}">LinkedIn</a>
+        
+      </div>
+      <div style="font:400 12px/1 'JetBrains Mono',monospace;color:{{ tertiaryText }};">© 2026 Evan Flynn</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { theme: 'dark' };
+
+  componentDidMount() {
+    const saved = localStorage.getItem('evan-theme');
+    if (saved) this.setState({ theme: saved });
+  }
+
+  toggleTheme = () => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    this.setState({ theme: next });
+    localStorage.setItem('evan-theme', next);
+  };
+
+  renderVals() {
+    const isDark = this.state.theme === 'dark';
+    const themeLabel = isDark ? '● Light' : '● Dark';
+    const colors = isDark ? {
+      bg: 'radial-gradient(1200px 620px at 72% -12%,rgba(110,168,255,0.12),transparent 60%),#0c0d10',
+      text: '#f2f3f5',
+      secondary: '#b3b7c0',
+      tertiary: '#7a7f8a',
+      accent: '#6ea8ff',
+      accentText: '#06080d',
+      border: 'rgba(255,255,255,0.09)',
+      link: '#8b8f99',
+      nav: '#cdd0d6',
+      card: 'rgba(255,255,255,0.02)',
+      img: '#13151b',
+      chip: 'rgba(255,255,255,0.02)'
+    } : {
+      bg: 'radial-gradient(1200px 620px at 72% -12%,rgba(110,168,255,0.08),transparent 60%),#f9f9fc',
+      text: '#1a1b1e',
+      secondary: '#5a5f6e',
+      tertiary: '#8a8f99',
+      accent: '#2b5fff',
+      accentText: '#ffffff',
+      border: 'rgba(0,0,0,0.08)',
+      link: '#5a5f6e',
+      nav: '#3a3f4a',
+      card: 'rgba(0,0,0,0.01)',
+      img: '#f0f1f5',
+      chip: 'rgba(0,0,0,0.04)'
+    };
+
+    const stats = [
+      { k: '80%', l: 'faster onboarding', s: '3–6 months → 2–3 weeks' },
+      { k: '100+', l: 'implementation launches', s: 'at Moov' },
+      { k: '4.9', l: 'CSAT score', s: '98% satisfaction rate' },
+      { k: '150', l: 'customers supported', s: 'on a live payments API' }
+    ];
+
+    const work = [
+      { n: '01', name: 'Customer Implementation Framework', org: 'Moov', cat: 'Implementation', metric: '80% faster onboarding', desc: 'Built a Pylon-based tracking system linking customer milestones, compliance checkpoints and automated stakeholder alerts — surfacing blockers before they hit timelines.', stack: 'Pylon · incident.io · Looker' },
+      { n: '02', name: 'Interactive API Documentation', org: 'Proxyrack', cat: 'Developer Experience', metric: '50+ live code examples', desc: 'Authored & validated 50+ editable code examples across Python, JS, Node & PHP in an embedded sandbox so developers could test auth, rotation and geo-targeting right in the docs.', stack: 'REST / GraphQL · Postman' },
+      { n: '03', name: 'Multilingual Documentation', org: 'Proxyrack', cat: 'Global Enablement', metric: '6 languages · 100% coverage', desc: 'Self-initiated internationalization of the full help center & API docs with an AI-assisted, human-reviewed workflow, plus a sync process to keep every translation current.', stack: 'Intercom · Prismy AI' }
+    ];
+
+    const projects = [
+      { n: '01', name: 'Cumulus Creative Services', cat: 'Web', desc: 'Marketing site for a creative studio — designed and shipped end to end.', stack: 'Sapper · Tailwind · Netlify', status: 'Live', url: 'https://www.cumulus-creative.com/', img: 'https://cdn.sanity.io/images/1libgah6/production/060de83694d7af2eeaea87de637adddc1d35a772-1024x512.webp' },
+      { n: '02', name: 'Expat Expenses', cat: 'Mobile', desc: 'Multi-currency budgeting app for people living across currencies.', stack: 'Svelte · Capacitor · Userbase', status: 'Beta', url: 'https://expatexpenses.com/', img: 'https://cdn.sanity.io/images/1libgah6/production/8014c080e1a3fc6f12215f876a72b271099b3f17-1024x512.webp' },
+      { n: '03', name: 'Madalitso Photography', cat: 'Web', desc: 'Portfolio site for a Shanghai-based photographer.', stack: 'SvelteKit · Sanity', status: 'Live', url: 'https://madalitso.photography/', img: 'https://cdn.sanity.io/images/1libgah6/production/e009d698c085e994a6db8f738151a7f2979800bc-4144x2068.webp' },
+      { n: '04', name: 'Fitness Friends', cat: 'Mobile', desc: 'Client iOS app for connecting people who want to work out together.', stack: 'Svelte · Capacitor · iOS', status: 'Beta', url: 'https://testflight.apple.com/join/SQCYqtDS', img: 'https://cdn.sanity.io/images/1libgah6/production/9e3b66906356cc858c75d0cb528159e8a2b5ef92-912x1796.webp' }
+    ];
+
+    const skills = [
+      { label: 'Technical Support', items: ['Pylon', 'Intercom', 'HelpScout', 'Notion', 'incident.io', 'jam.dev', 'AI chatbots'] },
+      { label: 'Customer Engagement', items: ['Onboarding strategy', 'Implementation planning', 'Technical documentation', 'CSAT management', 'Feedback optimization'] },
+      { label: 'APIs & Debugging', items: ['REST / GraphQL', 'Postman', 'API troubleshooting', 'Log analysis', 'DevTools'] },
+      { label: 'Data & Monitoring', items: ['BigQuery', 'Looker', 'SQL', 'Honeycomb', 'KPI tracking'] },
+      { label: 'Programming', items: ['JavaScript', 'Python', 'Node.js', 'HTML / CSS', 'Flutter / Dart', 'Terminal / CLI'] },
+      { label: 'Cloud, DevOps & Backend', items: ['Git / GitHub', 'CI/CD', 'Cloudflare', 'Google Cloud', 'Netlify', 'Firebase', 'MongoDB', 'Airtable', 'App Store deploy'] },
+      { label: 'No / Low-Code & Integrations', items: ['Flutterflow', 'Webflow', 'Zapier', 'n8n', 'Plaid', 'Payment platforms'] },
+      { label: 'Collaboration', items: ['Linear', 'Slack', 'macOS / Linux / Windows'] }
+    ];
+
+    return {
+      theme: this.state.theme,
+      themeLabel: themeLabel,
+      toggleTheme: this.toggleTheme,
+      bgColor: isDark ? '#0c0d10' : '#f9f9fc',
+      bgGradient: isDark ? 'radial-gradient(1200px 620px at 72% -12%,rgba(110,168,255,0.12),transparent 60%)' : 'radial-gradient(1200px 620px at 72% -12%,rgba(110,168,255,0.08),transparent 60%)',
+      textColor: colors.text,
+      secondaryText: colors.secondary,
+      tertiaryText: colors.tertiary,
+      accentColor: colors.accent,
+      accentTextColor: colors.accentText,
+      borderColor: colors.border,
+      linkText: colors.link,
+      navText: colors.nav,
+      navPad: '22px 44px',
+      heroPad: '90px 44px 50px',
+      cardBg: colors.card,
+      imgBg: colors.img,
+      chipBg: colors.chip,
+      linkHover: { color: colors.accent },
+      btnHover: { transform: 'translateY(-2px)' },
+      ghostHover: { borderColor: colors.accent, color: colors.accent },
+      cardHover: { transform: 'translateY(-4px)', borderColor: colors.accent },
+      themeHover: { background: colors.accent, color: colors.accentText },
+      stats, work, projects, skills,
+      resumeUrl: '/uploads/Evan Flynn Resume.pdf'
+    };
+  }
+}
+</script>
+</body>
+</html>

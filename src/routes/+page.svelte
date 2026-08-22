@@ -1,8 +1,5 @@
 <script>
   import { fly } from "svelte/transition";
-  export let data;
-
-  const projects = data?.body?.projects || [];
 
   const workCards = [
     {
@@ -262,63 +259,9 @@
     class="py-20 px-11 max-w-[1180px] mx-auto"
     in:fly={{ y: 30, duration: 900, delay: 800 }}
   >
-    <div class="mb-8">
-      <div class="flex items-baseline gap-3 mb-4">
-        <span class="font-mono text-sm text-primary font-semibold">02</span>
-        <h2 class="font-serif text-4xl">Also builds</h2>
-      </div>
-      <p class="text-sm leading-relaxed text-base-content/70 max-w-[540px]">
-        Side projects — web & mobile apps I design and ship end to end. Proof I
-        speak fluent developer when I'm supporting one.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[22px]">
-      {#each projects as project (project.name)}
-        <a
-          href={project.url || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="border border-base-content/10 rounded-xl overflow-hidden bg-base-200/30 hover:border-primary hover:translate-y-[-4px] transition-all duration-300 flex flex-col"
-        >
-          {#if project.mainImage}
-            <img
-              src={project.mainImage}
-              alt={project.name}
-              class="w-full h-[140px] object-cover"
-            />
-          {/if}
-          <div class="p-5">
-            <h3 class="font-semibold text-base mb-2 font-sans">
-              {project.name}
-            </h3>
-            {#if project.status}
-              <div
-                class="font-mono text-xs text-primary mb-2 font-medium uppercase"
-              >
-                {project.status}
-              </div>
-            {/if}
-            {#if project.stack}
-              <div class="font-mono text-xs text-base-content/50">
-                {project.stack}
-              </div>
-            {/if}
-          </div>
-        </a>
-      {/each}
-    </div>
-  </section>
-</div>
-
-<div class="border-b border-base-content/10">
-  <section
-    class="py-20 px-11 max-w-[1180px] mx-auto"
-    in:fly={{ y: 30, duration: 900, delay: 1000 }}
-  >
     <div class="mb-12">
       <div class="flex items-baseline gap-3 mb-4">
-        <span class="font-mono text-sm text-primary font-semibold">03</span>
+        <span class="font-mono text-sm text-primary font-semibold">02</span>
         <h2 class="font-serif text-4xl">Toolkit</h2>
       </div>
     </div>
@@ -357,7 +300,7 @@
   <section
     id="contact"
     class="py-[110px] px-11 pb-[70px] max-w-[1180px] mx-auto text-center"
-    in:fly={{ y: 30, duration: 900, delay: 1200 }}
+    in:fly={{ y: 30, duration: 900, delay: 1000 }}
   >
     <p class="font-mono text-xs uppercase tracking-[0.14em] text-primary mb-6">
       ● Let's connect

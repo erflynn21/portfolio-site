@@ -171,8 +171,10 @@
       <p
         class="text-[clamp(17px,2vw,21px)] leading-[1.6] text-base-content/70 max-w-[600px] mb-8"
       >
-        I support and implement software for the people who depend on it daily —
-        and build performant web & mobile apps that prove how it should feel.
+        I build systems that enable implementation and support teams to scale.
+        By identifying where operations break in onboarding, troubleshooting,
+        and communication, I architect solutions that reduce friction, automate
+        toil, and let teams focus on solving real problems.
       </p>
 
       <div class="flex flex-wrap gap-4">
@@ -229,10 +231,10 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-[30px]">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-[30px] justify-items-center">
       {#each workCards as card (card.name)}
         <div
-          class="border border-base-content/10 rounded-2xl bg-base-200/30 p-8 flex flex-col hover:border-primary hover:translate-y-[-4px] transition-all duration-300"
+          class="w-full border border-base-content/10 rounded-2xl bg-base-200/30 p-8 flex flex-col hover:border-primary hover:translate-y-[-4px] transition-all duration-300"
         >
           <div
             class="font-mono text-xs uppercase tracking-wider text-base-content/50 mb-4"
@@ -279,7 +281,7 @@
           <div class="flex flex-wrap gap-3">
             {#each group.skills as skill (skill)}
               <span
-                class="px-[13px] py-[7px] rounded-full border border-base-content/20 bg-base-200/50 text-sm font-sans"
+                class="px-[13px] py-[7px] rounded-full border border-base-content/20 bg-base-200/50 text-sm font-sans hover:border-primary hover:translate-y-[-2px] transition-all duration-300"
               >
                 {skill}
               </span>

@@ -128,6 +128,7 @@
     {
       label: "No / Low-Code & Integrations",
       skills: [
+        "Claude Cowork",
         "Flutterflow",
         "Webflow",
         "Zapier",
@@ -231,10 +232,12 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-[30px] justify-items-center">
+    <div
+      class="flex flex-wrap justify-center gap-[30px]"
+    >
       {#each workCards as card (card.name)}
         <div
-          class="w-full border border-base-content/10 rounded-2xl bg-base-200/30 p-8 flex flex-col hover:border-primary hover:translate-y-[-4px] transition-all duration-300"
+          class="w-full max-w-[320px] border border-base-content/10 rounded-2xl bg-base-200/30 p-8 flex flex-col hover:border-primary hover:translate-y-[-4px] transition-all duration-300"
         >
           <div
             class="font-mono text-xs uppercase tracking-wider text-base-content/50 mb-4"

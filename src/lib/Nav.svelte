@@ -3,8 +3,9 @@
 </script>
 
 <nav class="max-w-[1180px] mx-auto px-11 py-[22px] flex justify-between items-center">
-  <a href="/" class="font-mono font-medium text-xs uppercase tracking-[0.1em]">
-    Evan Flynn
+  <a href="/" class="flex items-center gap-3">
+    <img src="/logo-512.png" alt="Logo" class="w-9 h-9" />
+    <span class="font-mono font-medium text-sm uppercase tracking-[0.1em]">Evan Flynn</span>
   </a>
 
   <div class="flex items-center gap-8">

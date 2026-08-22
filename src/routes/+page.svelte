@@ -42,6 +42,14 @@
       description:
         "Self-initiated internationalization of the full help center & API docs with an AI-assisted, human-reviewed workflow, plus a sync process to keep every translation current.",
     },
+    {
+      org: "Proxyrack",
+      category: "Support Operations",
+      metric: "2 platforms → 1, +4 channels",
+      name: "Unified Omnichannel Support",
+      description:
+        "Consolidated HelpScout + Active Campaign into a single Intercom instance, eliminating duplicate workflows while expanding customer reach to email, chat, WhatsApp, and Telegram. Unified platform enabled efficient A/B testing, simplified email automation, and streamlined multi-channel conversation management.",
+    },
   ];
 
   const stats = [
@@ -66,14 +74,15 @@
   const skillGroups = [
     {
       label: "Technical Support",
+      skills: ["Pylon", "Intercom", "HelpScout", "incident.io"],
+    },
+    {
+      label: "Solutions & Implementation",
       skills: [
-        "Pylon",
-        "Intercom",
-        "HelpScout",
-        "Notion",
-        "incident.io",
-        "jam.dev",
-        "AI chatbots",
+        "Customer requirements gathering",
+        "Solutions architecture",
+        "Implementation strategy",
+        "Technical scoping",
       ],
     },
     {
@@ -107,39 +116,20 @@
         "Python",
         "Node.js",
         "HTML / CSS",
-        "Flutter / Dart",
         "Terminal / CLI",
       ],
     },
     {
       label: "Cloud, DevOps & Backend",
-      skills: [
-        "Git / GitHub",
-        "CI/CD",
-        "Cloudflare",
-        "Google Cloud",
-        "Netlify",
-        "Firebase",
-        "MongoDB",
-        "Airtable",
-        "App Store deploy",
-      ],
+      skills: ["Git / GitHub", "CI/CD", "Google Cloud", "Firebase", "MongoDB"],
     },
     {
-      label: "No / Low-Code & Integrations",
-      skills: [
-        "Claude Cowork",
-        "Flutterflow",
-        "Webflow",
-        "Zapier",
-        "n8n",
-        "Plaid",
-        "Payment platforms",
-      ],
+      label: "Integrations & APIs",
+      skills: ["Zapier", "n8n", "Webflow", "Plaid", "Payment platforms", "MCP"],
     },
     {
       label: "Collaboration",
-      skills: ["Linear", "Slack", "macOS / Linux / Windows"],
+      skills: ["Linear", "Slack"],
     },
   ];
 </script>
@@ -172,10 +162,12 @@
       <p
         class="text-[clamp(17px,2vw,21px)] leading-[1.6] text-base-content/70 max-w-[600px] mb-8"
       >
-        I build systems that enable implementation and support teams to scale.
-        By identifying where operations break in onboarding, troubleshooting,
-        and communication, I architect solutions that reduce friction, automate
-        toil, and let teams focus on solving real problems.
+        I build systems that enable implementation and support teams to scale. I
+        work directly with customers to understand their needs and architect
+        solutions for their implementation. I also identify where operations
+        break in onboarding, troubleshooting, and communication, and build
+        systems that reduce friction, handle the repetitive work, and let teams
+        focus on solving real problems.
       </p>
 
       <div class="flex flex-wrap gap-4">
@@ -183,7 +175,7 @@
           href="#work"
           class="px-7 py-[15px] rounded-full bg-primary text-primary-content font-mono font-semibold text-sm hover:translate-y-[-2px] transition-transform"
         >
-          See selected work
+          See selected projects
         </a>
         <a
           href="#contact"
@@ -228,13 +220,11 @@
     <div class="mb-12">
       <div class="flex items-baseline gap-3 mb-4">
         <span class="font-mono text-sm text-primary font-semibold">01</span>
-        <h2 class="font-serif text-4xl">Selected work</h2>
+        <h2 class="font-serif text-4xl">Selected projects</h2>
       </div>
     </div>
 
-    <div
-      class="flex flex-wrap justify-center gap-[30px]"
-    >
+    <div class="flex flex-wrap gap-[30px]">
       {#each workCards as card (card.name)}
         <div
           class="w-full max-w-[320px] border border-base-content/10 rounded-2xl bg-base-200/30 p-8 flex flex-col hover:border-primary hover:translate-y-[-4px] transition-all duration-300"
@@ -272,7 +262,7 @@
     </div>
 
     <div
-      class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-10 mb-8"
+      class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10 mb-8"
     >
       {#each skillGroups as group (group.label)}
         <div>
@@ -284,7 +274,7 @@
           <div class="flex flex-wrap gap-3">
             {#each group.skills as skill (skill)}
               <span
-                class="px-[13px] py-[7px] rounded-full border border-base-content/20 bg-base-200/50 text-sm font-sans hover:border-primary hover:translate-y-[-2px] transition-all duration-300"
+                class="px-4 py-[7px] rounded-full border border-base-content/20 bg-base-200/50 text-sm font-sans hover:border-primary hover:translate-y-[-2px] transition-all duration-300"
               >
                 {skill}
               </span>
@@ -295,8 +285,7 @@
     </div>
 
     <p class="font-mono text-xs text-base-content/50">
-      Also comfortable with Adobe Creative Suite, Final Cut Pro, Google
-      Workspace, Audacity — and a fluent Mandarin Chinese speaker.
+      Also a Mandarin Chinese speaker.
     </p>
   </section>
 </div>

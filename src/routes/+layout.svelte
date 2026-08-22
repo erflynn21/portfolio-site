@@ -1,6 +1,5 @@
 <script>
   import "../app.postcss";
-  import Footer from "$lib/Footer.svelte";
   import Nav from "$lib/Nav.svelte";
   import NProgress from "nprogress";
   import { navigating } from "$app/stores";
@@ -40,8 +39,6 @@
   >
     <slot />
   </main>
-
-  <Footer />
 </div>
 
 <style>

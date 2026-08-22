@@ -12,7 +12,14 @@
       name: "Customer Implementation Framework",
       description:
         "Built a Pylon-based tracking system linking customer milestones, compliance checkpoints and automated stakeholder alerts — surfacing blockers before they hit timelines.",
-      stack: "Pylon · incident.io · Looker",
+    },
+    {
+      org: "Moov",
+      category: "Support Operations",
+      metric: "Automated pre-investigations",
+      name: "Agentic Support System",
+      description:
+        "Built an agentic AI system in Pylon using MCP connections to logs and customer data that automatically investigates issues before engineers see tickets — reducing back-and-forth, enabling direct responses, and accelerating resolution.",
     },
     {
       org: "Proxyrack",
@@ -21,7 +28,14 @@
       name: "Interactive API Documentation",
       description:
         "Authored & validated 50+ editable code examples across Python, JS, Node & PHP in an embedded sandbox so developers could test auth, rotation and geo-targeting right in the docs.",
-      stack: "REST / GraphQL · Postman",
+    },
+    {
+      org: "Proxyrack",
+      category: "Support Operations",
+      metric: "55% automation",
+      name: "AI-Powered Support Automation",
+      description:
+        "Implemented and trained Intercom's Fin chatbot to handle routine support queries, automating common troubleshooting and reducing manual ticket volume across the team.",
     },
     {
       org: "Proxyrack",
@@ -30,7 +44,6 @@
       name: "Multilingual Documentation",
       description:
         "Self-initiated internationalization of the full help center & API docs with an AI-assisted, human-reviewed workflow, plus a sync process to keep every translation current.",
-      stack: "Intercom · Prismy AI",
     },
   ];
 
@@ -41,13 +54,13 @@
       caption: "3–6 months → 2–3 weeks",
     },
     {
-      number: "63",
-      label: "enterprise launches",
-      caption: "at Moov, +17 in progress",
+      number: "100+",
+      label: "implementation launches",
+      caption: "at Moov",
     },
     { number: "4.9", label: "CSAT score", caption: "98% satisfaction rate" },
     {
-      number: "112",
+      number: "150",
       label: "customers supported",
       caption: "on a live payments API",
     },
@@ -148,7 +161,9 @@
     in:fly={{ y: 30, duration: 900, delay: 200 }}
   >
     <div class="mb-12">
-      <p class="font-mono text-xs uppercase tracking-[0.14em] text-primary mb-6">
+      <p
+        class="font-mono text-xs uppercase tracking-[0.14em] text-primary mb-6"
+      >
         Implementation + Support Engineer @ Moov
       </p>
       <h1
@@ -236,9 +251,6 @@
           <p class="text-sm leading-[1.65] text-base-content/70 mb-6 flex-grow">
             {card.description}
           </p>
-          <div class="font-mono text-xs text-base-content/50">
-            {card.stack}
-          </div>
         </div>
       {/each}
     </div>
@@ -311,7 +323,9 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-10 mb-8">
+    <div
+      class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-10 mb-8"
+    >
       {#each skillGroups as group (group.label)}
         <div>
           <h3
@@ -333,8 +347,8 @@
     </div>
 
     <p class="font-mono text-xs text-base-content/50">
-      Also comfortable with Adobe Creative Suite, Final Cut Pro, Google Workspace,
-      Audacity — and a fluent Mandarin Chinese speaker.
+      Also comfortable with Adobe Creative Suite, Final Cut Pro, Google
+      Workspace, Audacity — and a fluent Mandarin Chinese speaker.
     </p>
   </section>
 </div>

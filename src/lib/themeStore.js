@@ -3,38 +3,47 @@ import { browser } from '$app/environment';
 
 const THEME_KEY = 'evan-theme';
 
+function getInitialTheme() {
+  if (!browser) return 'dark';
+
+  const stored = localStorage.getItem(THEME_KEY);
+  if (stored) return stored;
+
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
 function createThemeStore() {
-  let initialTheme = 'dark';
+  const { subscribe, set } = writable(getInitialTheme());
 
-  if (browser) {
-    const stored = localStorage.getItem(THEME_KEY);
-    initialTheme = stored || 'dark';
+  function updateDOM(theme) {
+    if (browser) {
+      document.documentElement.setAttribute('data-theme', `portfolio-${theme}`);
+    }
   }
-
-  const { subscribe, set } = writable(initialTheme);
 
   return {
     subscribe,
     toggle: () => {
-      let newTheme = 'dark';
-      const unsubscribe = subscribe(theme => {
-        newTheme = theme === 'dark' ? 'light' : 'dark';
+      let currentTheme;
+      subscribe(value => {
+        currentTheme = value;
       })();
-      unsubscribe();
+
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
       if (browser) {
         localStorage.setItem(THEME_KEY, newTheme);
-        document.documentElement.setAttribute('data-theme', `portfolio-${newTheme}`);
       }
 
+      updateDOM(newTheme);
       set(newTheme);
     },
-    set: (theme) => {
+    set: (newTheme) => {
       if (browser) {
-        localStorage.setItem(THEME_KEY, theme);
-        document.documentElement.setAttribute('data-theme', `portfolio-${theme}`);
+        localStorage.setItem(THEME_KEY, newTheme);
       }
-      set(theme);
+      updateDOM(newTheme);
+      set(newTheme);
     }
   };
 }

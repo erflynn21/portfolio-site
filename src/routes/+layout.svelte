@@ -4,17 +4,7 @@
   import NProgress from "nprogress";
   import { navigating } from "$app/stores";
   import "nprogress/nprogress.css";
-  import { onMount } from "svelte";
   import { theme } from "$lib/themeStore";
-
-  let currentTheme = 'dark';
-  theme.subscribe(t => {
-    currentTheme = t;
-  });
-
-  onMount(() => {
-    document.documentElement.setAttribute('data-theme', `portfolio-${currentTheme}`);
-  });
 
   NProgress.configure({
     minimum: 0.16,
@@ -31,7 +21,7 @@
   }
 </script>
 
-<div data-theme="portfolio-{currentTheme}">
+<div data-theme="portfolio-{$theme}">
   <Nav />
 
   <main

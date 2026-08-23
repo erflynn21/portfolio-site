@@ -10,8 +10,8 @@
 
   <div class="flex items-center gap-8">
     <div class="flex items-center gap-6 font-mono text-xs">
-      <a href="work" class="uppercase tracking-wider hover:text-primary transition-colors">Work</a>
-      <a href="contact" class="uppercase tracking-wider hover:text-primary transition-colors">Contact</a>
+      <a href="#work" class="uppercase tracking-wider hover:text-primary transition-colors">Work</a>
+      <a href="#contact" class="uppercase tracking-wider hover:text-primary transition-colors">Contact</a>
 
       <button
         on:click={() => theme.toggle()}
